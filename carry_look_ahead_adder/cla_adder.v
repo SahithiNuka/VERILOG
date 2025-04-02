@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 module cla_adder(a,b,cin,s,c3);
     input [3:0] a,b;
-    input cin;
+    input c0;
     output [3:0] s;
-    output c3;
+    output c4;
 
-	wire p0,p1,p2,p3,g0,g1,g2,g3,c0,c1,c2;
+	wire p0,p1,p2,p3,g0,g1,g2,g3,c1,c2,c3;
 	
 	xor x1(p0,a[0],b[0]);
 	xor x2(p1,a[1],b[1]);
@@ -36,14 +36,14 @@ module cla_adder(a,b,cin,s,c3);
 	and a3(g2,a[2],b[2]);
 	and a4(g3,a[3],b[3]);
 	
-	assign c0 = g0 | (p0 & cin);
-	assign c1 = g1 | (p1 & c0);
-	assign c2 = g2 | (p2 & c1);
-	assign c3 = g3 | (p3 & c2);
+	assign c1 = g0 | (p0 & c0);
+	assign c2 = g1 | (p1 & c1);
+	assign c3 = g2 | (p2 & c2);
+	assign c4 = g3 | (p3 & c3);
 	
-	assign s[0] = p0 ^ cin;
-	assign s[1] = p1 ^ c0;
-	assign s[2] = p2 ^ c1;
-	assign s[3] = p3 ^ c2;
+	assign s[0] = p0 ^ c0;
+	assign s[1] = p1 ^ c1;
+	assign s[2] = p2 ^ c2;
+	assign s[3] = p3 ^ c3;
 
 endmodule
