@@ -21,10 +21,10 @@ This challenge covers fundamental and advanced topics in digital design includin
 
 ## Topics Outline (Sample)
 
-| Day | Topic                      | Description                       |
-|-----|----------------------------|---------------------------------|
-| 1   | Introduction to RTL         | Basics of RTL and digital logic |
-| 2   | Logic Gates in Verilog      | Implement AND, OR, NOT gates    |
+| DAY | TOPIC                                                           
+|-----|-----------------------------------------------------------------|
+| 1   | LOGIC GATES USING UNIVERSAL GATES                               | 
+| 2   | HALF ADDER, HALF SUBTRACTOR, FULL ADDER & FULL SUBTRACTOR       |
 | 3   | 
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
