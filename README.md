@@ -83,6 +83,7 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 58  | 10010 SEQUENCE DETECTOR USING MEALY (2-BIT OVERLAPPING)  |
 | 59  | 1101 SEQUENCE DETECTOR USING MOORE (NON-OVERLAPPING)  |
 | 60  | 1001 SEQUENCE DETECTOR USING MOORE (1-BIT OVERLAPPING)  |
+| 61  | 11011 SEQUENCE DETECTOR USING MOORE (2-BIT OVERLAPPING)  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
