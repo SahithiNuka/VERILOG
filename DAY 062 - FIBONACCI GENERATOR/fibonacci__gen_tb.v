@@ -2,7 +2,7 @@ module fibonacci__gen_tb;
 	reg clk,rst;
 	wire [15:0]prsnt,next;
 	
-	fibonacci_gen(clk,rst,prsnt,next);
+	fibonacci_gen fg(clk,rst,prsnt,next);
 	
 	initial
 		begin
@@ -21,4 +21,5 @@ module fibonacci__gen_tb;
 		
 	initial
 		$monitor("time=%t, rst=%b, prsnt=%d, next=%d",$time,rst,prsnt,next);
+
 endmodule
