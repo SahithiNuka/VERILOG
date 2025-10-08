@@ -85,6 +85,8 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 60  | 1001 SEQUENCE DETECTOR USING MOORE (1-BIT OVERLAPPING)  |
 | 61  | 11011 SEQUENCE DETECTOR USING MOORE (2-BIT OVERLAPPING)  |
 | 62  | FIBONACCI GENERATOR  |
+| 63  | LIFO  |
+| 64  | FIXED PRIORITY ARBITERS  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
