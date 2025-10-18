@@ -87,6 +87,7 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 62  | FIBONACCI GENERATOR  |
 | 63  | LIFO  |
 | 64  | FIXED PRIORITY ARBITERS  |
+| 65  | GRAY CODE COUNTER  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
