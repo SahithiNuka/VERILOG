@@ -1,3 +1,5 @@
+===============================================================================================================================================================
+
 🚀 Excess-3 Adder in Verilog
 🎯 Overview
 
@@ -12,9 +14,21 @@ The design uses a Full Adder (FA)-based structure for bitwise addition and corre
 - Fully synthesizable Verilog RTL
 - Includes a self-checking testbench for simulation
 
-Inputs
+🧠 Design Description
+-> The adder uses four full adders (FA) to compute the initial binary sum of the two Excess-3 coded inputs.
+-> Additional full adders and logic are used to adjust the result according to Excess-3 rules.
+-> The circuit ensures the output remains in valid Excess-3 form after the operation.
+-> The internal carry and sum bits are handled carefully using intermediate wires and logic gates to maintain valid BCD/Excess-3 representation.
 
-|  Signal  |  Width  |  	Description  |
-|  a	     |  4-bit  |   First Excess-3 input  |
-|  b	     |  4-bit	 |   Second Excess-3 input  |
-|  cin     |	1-bit	 |   Input carry  |
+The testbench:
+-> Applies multiple test cases with different Excess-3 inputs.
+-> Monitors the output sum and carry in real time.
+-> Displays results in a readable format on the simulation console.
+
+Advantages of Excess-3 Code
+- Self-complementary → simplifies 9’s complement arithmetic
+- Eliminates invalid BCD states
+- Suitable for digital display systems
+- Reduces correction complexity in arithmetic circuits
+
+===============================================================================================================================================================
