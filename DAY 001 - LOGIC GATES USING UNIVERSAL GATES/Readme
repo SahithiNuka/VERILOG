@@ -1,13 +1,1 @@
-🚀 Excess-3 Adder in Verilog
-🎯 Overview
 
-This project implements a 4-bit Excess-3 Adder using Verilog HDL.
-It performs addition between two 4-bit Excess-3 coded numbers and generates the Excess-3 sum and carry output.
-The design uses a Full Adder (FA)-based structure for bitwise addition and correction logic for proper Excess-3 arithmetic.
-
-⚙️ Features
-- Adds two 4-bit Excess-3 numbers (a and b)
-- Supports an input carry (cin)
-- Produces 4-bit sum (x) and carry (cout)
-- Fully synthesizable Verilog RTL
-- Includes a self-checking testbench for simulation
