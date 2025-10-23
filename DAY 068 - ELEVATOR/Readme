@@ -1,0 +1,45 @@
+🚪 Elevator Controller using Verilog HDL
+📘 Project Overview
+
+This project implements a 4-floor Elevator Controller using Finite State Machine (FSM) design methodology in Verilog HDL.
+It simulates realistic elevator behavior such as responding to floor requests, controlling movement direction, and opening doors upon arrival.
+
+The RTL is parameterized, making it easy to scale for any number of floors.
+
+
+⚙️ Features
+-> FSM-based control with four operational states:
+      - IDLE — waiting for input/floor request
+      - MOVE_UP — elevator moving upward
+      - MOVE_DOWN — elevator moving downward
+      - OPEN_DOOR — elevator reached requested floor
+-> Direction logic for upward/downward movement
+-> Parameterized design for scalability
+-> Door control and floor indication signals
+-> Testbench included for behavioral simulation
+
+
+Design Details
+***Architecture***
+-> FSM Type: Moore Machine
+-> Inputs:
+      - clk — System clock
+      - reset — Active high synchronous reset
+      - floor_request — Desired target floor input
+-> Outputs:
+      - current_floor — Current floor position of elevator
+      - door_open — Indicates door status (1 = Open)
+      - direction — Elevator movement (Up/Down)
+
+Simulation Details
+-> Simulator Used: ModelSim / Vivado / Icarus Verilog
+-> Files Included:
+      - elevator.v → RTL design
+      - elevator_tb.v → Testbench for simulation
+
+
+Learning Outcomes
+- Understanding FSM-based control system design
+- Implementing parameterized RTL logic
+- Applying sequencing logic to real-world scenarios
+- Debugging and validating designs using testbenches
