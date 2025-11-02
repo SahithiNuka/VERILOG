@@ -90,6 +90,8 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 65  | GRAY CODE COUNTER  |
 | 66  | DIGITAL CLOCK  |
 | 67  | EXCESS - 3 ADDER  |
+| 68  | ELEVATOR  |
+| 69  | VENDING MACHINE 1  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
