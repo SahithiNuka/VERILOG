@@ -1,86 +1,86 @@
-module vending_machine_multi_tb();
+`timescale 1ns/1ps
+module tb_vending_machine_multi_v2();
 
     reg clk, reset;
-    reg [1:0] coin;       // 00: no coin, 01: 5 units, 10: 10 units
-    reg [1:0] select;     // 01: select A, 10: select B
+    reg [1:0] coin;
+    reg [1:0] select;
     wire dispense_A, dispense_B;
     wire [1:0] change;
 
-    vending_machine_multi (clk,reset,coin,select,dispense_A,dispense_B,change);
+    // Instantiate DUT (Device Under Test)
+    vending_machine_multi_v2 dut (
+        .clk(clk),
+        .reset(reset),
+        .coin(coin),
+        .select(select),
+        .dispense_A(dispense_A),
+        .dispense_B(dispense_B),
+        .change(change)
+    );
 
     // Clock generation
-	initial
-		begin
-			clk = 1'b0;
-			forever #5 clk = !clk;
-		end
+    always #5 clk = ~clk;
 
-    // Task for inserting coin
+    // Task for coin insertion
     task insert_coin(input [1:0] c);
-        begin
-            coin = c;
-            #10 coin = 2'b00; // release after one cycle
-        end
+    begin
+        coin = c;
+        #10 coin = 2'b00; // simulate coin removal
+    end
     endtask
 
-    // Task for selecting product
-    task select_item(input [1:0] s);
-        begin
-            select = s;
-            #10 select = 2'b00; // release after one cycle
-        end
+    // Task for product selection
+    task select_product(input [1:0] s);
+    begin
+        select = s;
+        #10 select = 2'b00; // simulate button release
+    end
     endtask
 
-    // Test sequence
     initial begin
+        $dumpfile("vending_machine_multi_v2.vcd");
+        $dumpvars(0, tb_vending_machine_multi_v2);
+
         clk = 0;
-        reset = 1;
-        coin = 2'b00;
-        select = 2'b00;
-        #20 reset = 0;
+        reset = 1; coin = 0; select = 0;
+        #10 reset = 0;
 
-        $display("\n--- Test 1: Exact amount for Product A (10 units) ---");
-        insert_coin(2'b10);   // insert 10
-        select_item(2'b01);   // select A
+        // Scenario 1: Buy A with exact 10 units
+        $display("\n--- Scenario 1: Buy A with 10 units ---");
+        insert_coin(2'b10); // +10
+        select_product(2'b01); // Select A
         #20;
 
-        $display("\n--- Test 2: Overpay for Product A (15 units → return 5) ---");
-        insert_coin(2'b10);   // 10
-        insert_coin(2'b01);   // +5
-        select_item(2'b01);   // select A → expect change = 5
+        // Scenario 2: Buy B with exact 15 units (5 + 10)
+        $display("\n--- Scenario 2: Buy B with 15 units ---");
+        insert_coin(2'b01); // +5
+        insert_coin(2'b10); // +10
+        select_product(2'b10); // Select B
         #20;
 
-        $display("\n--- Test 3: Exact amount for Product B (15 units) ---");
-        insert_coin(2'b10);   // 10
-        insert_coin(2'b01);   // +5
-        select_item(2'b10);   // select B → no change
+        // Scenario 3: Overpay for A (15 units → expect 5 change)
+        $display("\n--- Scenario 3: Buy A with 15 units (expect 5 change) ---");
+        insert_coin(2'b10); // +10
+        insert_coin(2'b01); // +5
+        select_product(2'b01); // Select A
         #20;
 
-        $display("\n--- Test 4: Invalid selection (not enough money) ---");
-        insert_coin(2'b01);   // only 5
-        select_item(2'b10);   // try selecting B (should not dispense)
+        // Scenario 4: Overpay for A (20 units → expect 10 change)
+        $display("\n--- Scenario 4: Buy A with 20 units (expect 10 change) ---");
+        insert_coin(2'b10); // +10
+        insert_coin(2'b10); // +10
+        select_product(2'b01); // Select A
         #20;
 
-        $display("\n--- Test 5: Reset behavior ---");
-        reset = 1; #10 reset = 0;
-        insert_coin(2'b10);
-        select_item(2'b01);   // normal operation again
+        // Scenario 5: Overpay for B (20 units → expect 5 change)
+        $display("\n--- Scenario 5: Buy B with 20 units (expect 5 change) ---");
+        insert_coin(2'b10); // +10
+        insert_coin(2'b10); // +10
+        select_product(2'b10); // Select B
         #20;
 
-        $display("\n--- Simulation Complete ---");
-        #50
-		$finish;
+        $display("\n--- Simulation complete ---");
+        $finish;
     end
-
-    // Monitor outputs
-    initial begin
-        $monitor("Time=%0t,Coin=%b,Select=%b,A=%b,B=%b,Change=%b,State=%b",$time, coin, select, dispense_A, dispense_B, change, dut.state);
-    end
-  
-  initial
-		begin
-			$dumpfile("dump.vcd");
-			$dumpvars;
-		end
 
 endmodule
