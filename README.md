@@ -92,6 +92,8 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 67  | EXCESS - 3 ADDER  |
 | 68  | ELEVATOR  |
 | 69  | VENDING MACHINE 1  |
+| 70  | VENDING MACHINE 2  |
+| 71  | LINEAR FEEDBACK SHIFT REGISTER  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
