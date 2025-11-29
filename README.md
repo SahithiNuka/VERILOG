@@ -99,6 +99,10 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 74  | WALLACE MULTIPLIER  |
 | 75  | DADDA MULTIPLIER  |
 | 76  | CARRY SAVE MULTIPLIER  |
+| 77  | BRAUN MULTIPLIER  |
+| 78  | ROM  |
+| 79  | TRAFFIC LIGHT CONTROLLER  |
+| 80  | ONE-HOT FSM  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
