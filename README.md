@@ -109,6 +109,9 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 84  | MASK ROM  |
 | 85  | PROM  |
 | 86  | EPROM  |
+| 87  | BURST SRAM  |
+| 88  | CHECKING A NUMBER IS EVEN OR ODD  |
+| 89  | FACTORIAL OF A NUMBER  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
