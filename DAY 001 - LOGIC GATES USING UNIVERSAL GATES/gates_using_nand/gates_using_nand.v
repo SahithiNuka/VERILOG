@@ -62,7 +62,7 @@ module nand_gate(a, b, y);
 	input a,b;
 	output y;
 	
-	nand n1(y,a,b);
+	nand n1(a,b,y);
 	
 endmodule
 	
