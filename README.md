@@ -112,6 +112,9 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 87  | BURST SRAM  |
 | 88  | CHECKING A NUMBER IS EVEN OR ODD  |
 | 89  | FACTORIAL OF A NUMBER  |
+| 90  | CHECKING A NUMBER IS PRIME NUMBER OR NOT  |
+| 91  | CHECKING A NUMBER IS ARMSTRONG NUMBER OR NOT  |
+| 92  | CHECKING A NUMBER IS PALINDROME NUMBER OR NOT  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
