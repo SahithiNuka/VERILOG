@@ -117,6 +117,7 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 92  | CHECKING A NUMBER IS PALINDROME NUMBER OR NOT  |
 | 93  | PAL  |
 | 94  | PLA  |
+| 95  | ASYNCHRONOUS FIFO  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
