@@ -115,6 +115,8 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 90  | CHECKING A NUMBER IS PRIME NUMBER OR NOT  |
 | 91  | CHECKING A NUMBER IS ARMSTRONG NUMBER OR NOT  |
 | 92  | CHECKING A NUMBER IS PALINDROME NUMBER OR NOT  |
+| 93  | PAL  |
+| 94  | PLA  |
 
 > **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
 
