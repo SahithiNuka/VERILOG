@@ -118,10 +118,13 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 93  | PAL  |
 | 94  | PLA  |
 | 95  | ASYNCHRONOUS FIFO  |
+| 96  | 2:4 DECODER USING 4X1 MUX  |
+| 97  | 3:8 DECODER USING 1X8 DEMUX  |
+| 98  | MAGNITUDE COMPARATOR USING 4:16 DECODER  |
+| 99  | D-FILPFLOP USING 2X1 MUX  |
+| 100 | NAND FLASH MEMORY AND NOR FLASH MEMORY  |
 
-> **Note:** The 100 days challenge topics are currently being developed and not all days are completed yet. Updates will be provided regularly.
-
-REFER TO LINKEDIN POSTS FOR COMPLETE CONCEPT.
+REFER TO THE LINKEDIN POSTS FOR COMPLETE CONCEPT.
 
 ## Contribution
 
