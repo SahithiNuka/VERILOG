@@ -124,7 +124,7 @@ This challenge covers fundamental and advanced topics in digital design includin
 | 99  | D-FILPFLOP USING 2X1 MUX  |
 | 100 | NAND FLASH MEMORY AND NOR FLASH MEMORY  |
 
-REFER TO THE LINKEDIN POSTS FOR COMPLETE CONCEPT.
+> NOTE: REFER TO THE LINKEDIN POSTS FOR COMPLETE CONCEPT.
 
 ## Contribution
 
